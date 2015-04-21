@@ -1,0 +1,36 @@
+﻿
+<form name="addPhoneForm" ng-submit="addPhone()" novalidate>
+
+    manu:<input type="text" ng-model="phone.manu" name="manu" ng-minlength="2" required/>
+    <span ng-show="addPhoneForm.manu.$error.required">Required</span>
+    <span ng-show="addPhoneForm.manu.$error.minlength">Name should be longer</span><br/>
+
+    model:<input type="text" ng-model="phone.model" name="model" ng-minlength="2" required/>
+    <span ng-show="addPhoneForm.model.$error.required">Required</span>
+    <span ng-show="addPhoneForm.model.$error.minlength">Name should be longer</span><br/>
+
+    cpu:<input type="text" ng-model="phone.cpu" name="cpu" ng-minlength="2" required/>
+    <span ng-show="addPhoneForm.cpu.$error.required">Required</span>
+    <span ng-show="addPhoneForm.cpu.$error.minlength">Name should be longer</span><br/>
+
+    gpu:<input type="text" ng-model="phone.gpu" name="gpu" ng-minlength="4" required/>
+    <span ng-show="addPhoneForm.gpu.$error.required">Required</span>
+    <span ng-show="addPhoneForm.gpu.$error.minlength">Name should be longer</span><br/>
+
+    pixel height:<input type="number" ng-model="phone.pixelHeight" name="pixelHeight" min="800" required/>
+    <span ng-show="addPhoneForm.pixelHeight.$error.number">Not a number</span>
+    <span ng-show="addPhoneForm.pixelHeight.$error.min">Enter a larger number</span><br/>
+
+    pixel width:<input type="number" ng-model="phone.pixelWidth" name="pixelWidth" min="600" required/>
+    <span ng-show="addPhoneForm.pixelWidth.$error.number">Not a number</span>
+    <span ng-show="addPhoneForm.pixelWidth.$error.min">Enter a larger number</span><br/>
+
+    battery capacity:<input type="number" ng-model="phone.battCap" name="battCap" min="1000"/>mah
+    <span ng-show="addPhoneForm.battCap.$error.number">Not a number</span>
+    <span ng-show="addPhoneForm.battCap.$error.min">Enter a larger number</span><br/>
+    <span ng-show="genErr">{{genErr}}</span><br ng-show="genErr"/>
+
+    <button type="submit">Submit</button>
+
+</form>
+
