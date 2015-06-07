@@ -5,17 +5,22 @@
     $scope.genErr = false;
     $scope.phoneDisplayable = false;
 
-    $scope.phone = {
-        manu: "",
-        model: "",
-        cpu: "",
-        gpu: "",
-        pixelWidth: 0,
-        pixelHeight: 0,
-        battCap: 0
-    };
+    function setInitPhoneState() {
+       
+        $scope.phone = {
+            manu: "",
+            model: "",
+            cpu: "",
+            gpu: "",
+            pixelWidth: 0,
+            pixelHeight: 0,
+            battCap: 0
+        };
+    }
 
-    $scope.displayForm = function() {
+    $scope.displayForm = function () {
+
+        setInitPhoneState();
         $scope.phoneFormDisplayable = true;
         $scope.phoneDisplayable = false;
     }
@@ -32,9 +37,10 @@
 
     function getData() {
 
-        $http.get('/api/data', { cache: false }).success(function(data, status) {
-            $scope.data = data;
-        });
+        $http.get('/api/data', { cache: false })
+             .success(function (data, status) {
+                $scope.data = data;
+             });
     }
 
     $scope.addPhone = function() {
@@ -59,9 +65,12 @@
         $scope.phoneFormDisplayable = false;
     }
 
-    $document.ready(function() {
+    $document.ready(function () {
+
+        setInitPhoneState();
         getData();
     });
+
 });
 
 app.directive('addPhoneFormTemplate', function () {

@@ -77,3 +77,47 @@ C:\Users\win8user\Documents\Visual Studio 2012\Projects\AngularMvcPhoneDb\Angula
 C:\Users\win8user\Documents\Visual Studio 2012\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\Iesi.Collections.xml
 C:\Users\win8user\Documents\Visual Studio 2012\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\NHibernate.Infrastructure.dll
 C:\Users\win8user\Documents\Visual Studio 2012\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\NHibernate.Infrastructure.pdb
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\AngularMvcPhoneDb.Mvc.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\AngularMvcPhoneDb.Mvc.pdb
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\AngularMvcPhoneDb.Core.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\Antlr3.Runtime.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\EntityFramework.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\EntityFramework.SqlServer.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\FluentNHibernate.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\Iesi.Collections.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\Newtonsoft.Json.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\NHibernate.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\NHibernate.Infrastructure.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Net.Http.Formatting.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Web.Http.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Web.Http.WebHost.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Web.Mvc.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Web.Optimization.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Web.Providers.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Web.Razor.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Web.WebPages.Deployment.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Web.WebPages.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Web.WebPages.Razor.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\WebGrease.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\AngularMvcPhoneDb.Core.pdb
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\NHibernate.Infrastructure.pdb
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\EntityFramework.xml
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\EntityFramework.SqlServer.xml
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\FluentNHibernate.pdb
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\FluentNHibernate.xml
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\Iesi.Collections.xml
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\NHibernate.xml
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\Newtonsoft.Json.xml
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Net.Http.Formatting.xml
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Web.Http.xml
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Web.Http.WebHost.xml
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Web.Mvc.xml
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Web.Razor.xml
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Web.WebPages.xml
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Web.WebPages.Deployment.xml
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\System.Web.WebPages.Razor.xml
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\obj\Debug\AngularMvcPhoneDb.Mvc.csprojResolveAssemblyReference.cache
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\obj\Debug\AngularMvcPhoneDb.Mvc.dll
+C:\Users\win8user\Programming\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\obj\Debug\AngularMvcPhoneDb.Mvc.pdb

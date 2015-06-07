@@ -31,6 +31,18 @@ describe("Phone controller test", function () {
         })
     );
 
+    it("Should set form data to initial state when user tries to add new phone", function() {
+
+        scope.displayForm();
+
+        expect(scope.phone.pixelWidth).toBe(0);
+        expect(scope.phone.pixelHeight).toBe(0);
+        expect(scope.phone.manu).toBe("");
+        expect(scope.phone.model).toBe("");
+        expect(scope.phoneFormDisplayable).toBe(true);
+        expect(scope.phoneDisplayable).toBe(false);
+    });
+
     it("Should retrieve data on doc ready", function () {
 
         var data = "ReadyToGo";
@@ -41,6 +53,10 @@ describe("Phone controller test", function () {
         callback();
 
         expect(scope.data).toBe(data);
+        expect(scope.phone.pixelWidth).toBe(0);
+        expect(scope.phone.pixelHeight).toBe(0);
+        expect(scope.phone.manu).toBe("");
+        expect(scope.phone.model).toBe("");
     });
 
     it("Should give error if user tries to add phone with no data", function () {
