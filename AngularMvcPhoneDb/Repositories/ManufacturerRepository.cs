@@ -11,11 +11,11 @@ namespace AngularMvcPhoneDb.Core.Repositories
 {
     public class ManufacturerRepository : IManufacturerRepository
     {
-        private readonly IHibernateSessionManager session_Manager;
+        private readonly IHibernateSessionManager _sessionManager;
 
         public ManufacturerRepository(IHibernateSessionManager sessionManager)
         {
-            session_Manager = sessionManager;
+            _sessionManager = sessionManager;
         }
 
         public ManufacturerRepository() : this(new HibernateSessionManager()) {}
@@ -25,7 +25,7 @@ namespace AngularMvcPhoneDb.Core.Repositories
         /// </summary>
         public IEnumerable<PhoneManufacturerDto> LoadAllWithPhones()
         {
-            ISession session = session_Manager.CreateSession();
+            ISession session = _sessionManager.CreateSession();
             IList<SmartPhone> smartphones = session.CreateCriteria<SmartPhone>()
                                                    .List<SmartPhone>();
 
@@ -50,7 +50,7 @@ namespace AngularMvcPhoneDb.Core.Repositories
         {
             IProjection mfName = Projections.Property<Manufacturer>(x => x.Name);
 
-            int? count = session_Manager.CreateSession()
+            int? count = _sessionManager.CreateSession()
                                         .CreateCriteria<Manufacturer>()
                                         .SetProjection(Projections.Count(Projections.Id()))
                                         .Add(Restrictions.Eq(mfName , manu.ToLower()).IgnoreCase())
@@ -63,7 +63,7 @@ namespace AngularMvcPhoneDb.Core.Repositories
         {
             IProjection mfName = Projections.Property<Manufacturer>(x => x.Name);
 
-            Manufacturer m = session_Manager.CreateSession()
+            Manufacturer m = _sessionManager.CreateSession()
                                             .CreateCriteria<Manufacturer>()
                                             .Add(Restrictions.Eq(mfName, manu.ToLower()).IgnoreCase())
                                             .UniqueResult() as Manufacturer;
@@ -73,7 +73,7 @@ namespace AngularMvcPhoneDb.Core.Repositories
 
         public void Save(Manufacturer manufacturer)
         {
-            ISession session = session_Manager.CreateSession();
+            ISession session = _sessionManager.CreateSession();
             session.Save(manufacturer);
             session.Flush();
         }
