@@ -2,7 +2,7 @@
 
     $scope.phoneFormDisplayable = false;
     $scope.data = null;
-    $scope.genErr = null;
+    $scope.genErr = false;
     $scope.phoneDisplayable = false;
 
     $scope.phone = {
@@ -45,7 +45,7 @@
             return;
         }
 
-        $scope.genErr = null;
+        $scope.genErr = false;
 
         if ($scope.addPhoneForm.$invalid)
             return;

@@ -40,7 +40,7 @@ describe("Phone controller test", function () {
         var callback = DocumentStub.getCallback();
         callback();
 
-        expect(scope.data).toBe(data + "");
+        expect(scope.data).toBe(data);
     });
 
     it("Should give error if user tries to add phone with no data", function () {
@@ -57,7 +57,7 @@ describe("Phone controller test", function () {
         scope.addPhoneForm.$invalid = true;
         scope.addPhone();
 
-        expect(scope.genErr).toBeFalsy();
+        expect(scope.genErr).toBe(false);
         expect(HttpMock.verifyPostCalled()).toBe(false);
     });
 
@@ -74,7 +74,7 @@ describe("Phone controller test", function () {
 
         scope.addPhone();
 
-        expect(scope.genErr).toBeFalsy();
+        expect(scope.genErr).toBe(false);
         expect(HttpMock.verifyPostCalled()).toBe(true, "that $http::post method was called");
         expect(PhoneServiceMock.verifyAddPhone("myPhone", "lotsOfPhones", phoneId)).toBe(true, "that addPhone(myPhone, lotsOfPhones, " + phoneId + ") was called");
     });

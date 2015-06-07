@@ -1,15 +1,15 @@
 ﻿var PhoneServiceMock = (function () {
 
-    var phone, data, id;
+    var _phone, _data, _id;
 
-    function _addPhone(_phone, _data, _id) {
+    function _addPhone(phone, data, id) {
 
-        phone = _phone;
-        data = _data;
-        id = _id;
+        _phone = phone;
+        _data = data;
+        _id = id;
     }
 
-    function _verifyAddPhone(_phone, _data, _id) {
+    function _verifyAddPhone(phone, data, id) {
         return _phone === phone && _data === data && _id === id;
     }
 
