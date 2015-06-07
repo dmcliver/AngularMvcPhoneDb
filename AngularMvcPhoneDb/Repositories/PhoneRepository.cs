@@ -1,37 +1,38 @@
 ﻿using System;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
 using AngularMvcPhoneDb.Core.Domain;
+using NHibernate;
+using NHibernate.Infrastructure;
 
 namespace AngularMvcPhoneDb.Core.Repositories
 {
     public class PhoneRepository : IPhoneRepository
     {
-        public void Add(SmartPhone phone)
+        private readonly IHibernateSessionManager _sessionManager;
+
+        public PhoneRepository(IHibernateSessionManager sessionManager)
         {
-            using (var dbContext = new PhoneDbContext())
-            {
-                    dbContext.SmartPhone.Add(phone);
-                    dbContext.Entry(phone).State = EntityState.Added;
-                    dbContext.SaveChanges();
-            }
+            _sessionManager = sessionManager;
+        }
+
+        public PhoneRepository() : this(new HibernateSessionManager()) {}
+
+        public Guid Add(SmartPhone phone)
+        {
+            ISession session = _sessionManager.CreateSession();
+            session.Save(phone);
+            session.Flush();
+            return phone.SmartPhoneId;
         }
 
         public SmartPhone Create()
         {
-            using (var dbContext = new PhoneDbContext())
-            {
-                return dbContext.SmartPhone.Create();
-            }
+            return new SmartPhone();
         }
 
         public SmartPhone LoadById(Guid id)
         {
-            using (var dbContext = new PhoneDbContext())
-            {
-                return dbContext.SmartPhone.Single(p => p.SmartPhoneId.Equals(id));
-            }
+            SmartPhone phone = _sessionManager.CreateSession().Get<SmartPhone>(id);
+            return phone;
         }
     }
 }

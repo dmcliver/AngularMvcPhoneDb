@@ -8,7 +8,10 @@ namespace AngularMvcPhoneDb.Mvc
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/angular").Include("~/Scripts/angular.js"));
-            bundles.Add(new ScriptBundle("~/bundles/phoneController").Include("~/Scripts/App/phoneController.js"));
+            bundles.Add(new ScriptBundle("~/bundles/phoneController")
+                   .Include("~/Scripts/knockout-2.2.0.js")
+                   .Include("~/Scripts/App/phoneService.js")
+                   .Include("~/Scripts/App/phoneController.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));

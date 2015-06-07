@@ -68,3 +68,12 @@ C:\Users\win8user\Documents\Visual Studio 2012\Projects\AngularMvcPhoneDb\Angula
 C:\Users\win8user\Documents\Visual Studio 2012\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\obj\Debug\AngularMvcPhoneDb.Mvc.csprojResolveAssemblyReference.cache
 C:\Users\win8user\Documents\Visual Studio 2012\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\obj\Debug\AngularMvcPhoneDb.Mvc.dll
 C:\Users\win8user\Documents\Visual Studio 2012\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\obj\Debug\AngularMvcPhoneDb.Mvc.pdb
+C:\Users\win8user\Documents\Visual Studio 2012\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\FluentNHibernate.dll
+C:\Users\win8user\Documents\Visual Studio 2012\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\NHibernate.dll
+C:\Users\win8user\Documents\Visual Studio 2012\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\Iesi.Collections.dll
+C:\Users\win8user\Documents\Visual Studio 2012\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\FluentNHibernate.pdb
+C:\Users\win8user\Documents\Visual Studio 2012\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\FluentNHibernate.xml
+C:\Users\win8user\Documents\Visual Studio 2012\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\NHibernate.xml
+C:\Users\win8user\Documents\Visual Studio 2012\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\Iesi.Collections.xml
+C:\Users\win8user\Documents\Visual Studio 2012\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\NHibernate.Infrastructure.dll
+C:\Users\win8user\Documents\Visual Studio 2012\Projects\AngularMvcPhoneDb\AngularMvcPhoneDb.Mvc\bin\NHibernate.Infrastructure.pdb

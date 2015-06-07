@@ -13,7 +13,7 @@ namespace AngularMvcPhoneDb.Mvc.Controllers
             phone.Cpu = model.cpu;
             phone.DisplayType = DisplayType.IPS;
             phone.Gpu = model.gpu;
-            phone.ManufacturerName = manufacturer.Name;
+            phone.Manufacturer = manufacturer;
             phone.Model = model.model;
             phone.ModelYear = DateTime.Now;
             phone.PixelHeight = model.pixelHeight;

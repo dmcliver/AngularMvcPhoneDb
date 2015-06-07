@@ -4,17 +4,16 @@ namespace AngularMvcPhoneDb.Core.Domain
 {
     public class SmartPhone
     {
-        public Guid SmartPhoneId { get; set; }
-        public String Model { get; set; }
-        public int BatteryCapacity { get; set; }
-        public string ManufacturerName { get; set; }
+        public virtual Guid SmartPhoneId { get; set; }
+        public virtual String Model { get; set; }
+        public virtual int BatteryCapacity { get; set; }
         public virtual Manufacturer Manufacturer { get; set; }
-        public int PixelWidth { get; set; }
-        public int PixelHeight { get; set; }
-        public String Cpu { get; set; }
-        public String Gpu { get; set; }
-        public DisplayType DisplayType { get; set; }
-        public DateTime ModelYear { get; set; }
+        public virtual int PixelWidth { get; set; }
+        public virtual int PixelHeight { get; set; }
+        public virtual String Cpu { get; set; }
+        public virtual String Gpu { get; set; }
+        public virtual DisplayType DisplayType { get; set; }
+        public virtual DateTime ModelYear { get; set; }
     }
 }
 

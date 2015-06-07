@@ -31,21 +31,35 @@ namespace AngularMvcPhoneDb.Mvc.Controllers
             return _manufacturerRepository.LoadAllWithPhones();
         }
 
-        public SmartPhone Get(Guid id)
+        public dynamic Get(Guid id)
         {
-            return _phoneRepository.LoadById(id);
+            SmartPhone phone = _phoneRepository.LoadById(id);
+            
+            return new
+            {
+                phone.Model, 
+                phone.BatteryCapacity,
+                phone.Cpu, 
+                phone.Gpu, 
+                phone.PixelWidth,
+                phone.PixelHeight
+            };
         }
 
         // POST api/data
-        public void Post([FromBody]AddPhoneModel model)
+        public Guid Post([FromBody]AddPhoneModel model)
         {
-                Manufacturer manufacturer = !_manufacturerRepository.Any(model.manu) ? 
-                                            new Manufacturer {Name = model.manu} : 
-                                            _manufacturerRepository.LoadById(model.manu);
+            bool anyManufacturers = _manufacturerRepository.Any(model.manu);
+            Manufacturer manufacturer = !anyManufacturers? 
+                                        new Manufacturer {Name = model.manu} : 
+                                        _manufacturerRepository.LoadById(model.manu);
 
-                var phone = _phoneRepository.Create();
-                _smartPhoneBuilder.BuildFromModel(phone, model, manufacturer);
-                _phoneRepository.Add(phone);
+            if (!anyManufacturers)
+                _manufacturerRepository.Save(manufacturer);
+
+            var phone = _phoneRepository.Create();
+            _smartPhoneBuilder.BuildFromModel(phone, model, manufacturer);
+            return _phoneRepository.Add(phone);
         }
     }
 }

@@ -13,5 +13,6 @@ namespace AngularMvcPhoneDb.Core.Repositories
 
         bool Any(string manu);
         Manufacturer LoadById(string manu);
+        void Save(Manufacturer manufacturer);
     }
 }

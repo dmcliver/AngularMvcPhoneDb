@@ -1,4 +1,4 @@
-﻿app.controller('phoneController', function($scope, $document, $http) {
+﻿app.controller('phoneController', function($scope, $document, $http, phoneService) {
 
     $scope.phoneFormDisplayable = false;
     $scope.data = null;
@@ -25,7 +25,7 @@
         $scope.phoneFormDisplayable = false;
         $scope.phoneDisplayable = true;
 
-        $http.get('/api/data/' + id).success(function(data, status) {
+        $http.get('/api/data/'+ id).success(function(data, status) {
             $scope.selectedPhone = data;
         });
     }
@@ -39,7 +39,6 @@
 
     $scope.addPhone = function() {
 
-        $scope.phoneDisplayable = false;
         if ($scope.addPhoneForm.$pristine) {
 
             $scope.genErr = "Please enter some data";
@@ -48,10 +47,15 @@
 
         $scope.genErr = null;
 
-        if ($scope.addPhoneForm.$invalid) return;
+        if ($scope.addPhoneForm.$invalid)
+            return;
 
-        $http.post('/api/data', $scope.phone); //TODO: error handling
-        getData();
+        //TODO: error handling
+        $http.post('/api/data', $scope.phone)
+             .success(function(data) {
+                phoneService.addPhone($scope.phone, $scope.data, data);
+             });
+
         $scope.phoneFormDisplayable = false;
     }
 
