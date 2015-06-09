@@ -19,9 +19,6 @@ module.exports = function(config) {
 	'AngularMvcPhoneDb.Mvc/Scripts/angular.js',
   	'AngularMvcPhoneDb.Mvc/Scripts/angular-mocks.js',
 	'AngularMvcPhoneDb.Mvc.Tests/JsTestUtils/TestHarness.js',
-	'AngularMvcPhoneDb.Mvc.Tests/JsTestUtils/HttpMock.js',
-	'AngularMvcPhoneDb.Mvc.Tests/JsTestUtils/PhoneServiceMock.js',
-	'AngularMvcPhoneDb.Mvc.Tests/JsTestUtils/DocumentStub.js',
 	'AngularMvcPhoneDb.Mvc/Scripts/App/PhoneService.js',
       	'AngularMvcPhoneDb.Mvc.Tests/JsTests/PhoneServiceTest.js',
 	'AngularMvcPhoneDb.Mvc/Scripts/App/PhoneController.js',
@@ -43,7 +40,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', 'html'],
+    reporters: ['progress'],
 
 
     // web server port

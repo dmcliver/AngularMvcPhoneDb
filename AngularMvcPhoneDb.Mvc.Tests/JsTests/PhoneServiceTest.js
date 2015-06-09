@@ -1,10 +1,8 @@
 ﻿/// <reference path="../../AngularMvcPhoneDb.Mvc/Scripts/knockout-2.2.0.js"/>
-/// <reference path="../Scripts/angular.js"/>
+/// <reference path="../../AngularMvcPhoneDb.Mvc/Scripts/angular.js"/>
 /// <reference path="../Scripts/angular-mocks.js"/>
 /// <reference path="../Scripts/jasmine.js"/>
 /// <reference path="../JsTestUtils/TestHarness.js"/>
-/// <reference path="../JsTestUtils/HttpMock.js"/>
-/// <reference path="../JsTestUtils/DocumentStub.js"/>
 /// <reference path="../../AngularMvcPhoneDb.Mvc/Scripts/App/phoneService.js"/>
 
 describe("Phone service test", function () {

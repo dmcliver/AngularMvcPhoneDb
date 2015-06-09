@@ -1,35 +1,40 @@
-﻿/// <reference path="../Scripts/angular.js"/>
-/// <reference path="../Scripts/angular-mocks.js"/>
+﻿/// <reference path="../../AngularMvcPhoneDb.Mvc/Scripts/angular.js"/>
+/// <reference path="../../AngularMvcPhoneDb.Mvc/Scripts/angular-mocks.js"/>
 /// <reference path="../Scripts/jasmine.js"/>
 /// <reference path="../JsTestUtils/TestHarness.js"/>
 /// <reference path="../JsTestUtils/HttpMock.js"/>
-/// <reference path="../JsTestUtils/PhoneServiceMock.js"/>
-/// <reference path="../JsTestUtils/DocumentStub.js"/>
 /// <reference path="../../AngularMvcPhoneDb.Mvc/Scripts/App/phoneController.js"/>
 
 describe("Phone controller test", function () {
 
-    var scope, controller;
+    var scope, controller, $http, phoneService, doc, loadDocument;
 
     beforeEach(module("PhoneApp"));
 
-    beforeEach(
+    beforeEach(function() {
 
-        inject(function ($rootScope, $controller) {
+        $http = jasmine.createSpyObj("$http", ["post", "get"]);
+        phoneService = jasmine.createSpyObj("phoneService", ["addPhone"]);
+        doc = jasmine.createSpyObj("$document", ["ready"]);
+
+        var onReady = doc.ready.and || doc.ready.andCallFake;
+
+        doc.ready.andCallFake(function (callbak) {
+            loadDocument = callbak;
+        });
+
+        inject(function($rootScope, $controller) {
 
             scope = $rootScope.$new();
 
-            controller = $controller;
-            controller(
-                "phoneController", {
-                    '$scope': scope,
-                    '$document': DocumentStub,
-                    '$http': HttpMock,
-                    'phoneService': PhoneServiceMock
-                }
-            );
-        })
-    );
+            controller = $controller("phoneController", {
+                '$scope': scope,
+                '$document': doc,
+                '$http': $http,
+                'phoneService': phoneService
+            });
+        });
+    });
 
     it("Should set form data to initial state when user tries to add new phone", function() {
 
@@ -47,10 +52,9 @@ describe("Phone controller test", function () {
 
         var data = "ReadyToGo";
 
-        HttpMock.withGetSuccessGiveData(data);
+        stubGet(data);
 
-        var callback = DocumentStub.getCallback();
-        callback();
+        loadDocument();
 
         expect(scope.data).toBe(data);
         expect(scope.phone.pixelWidth).toBe(0);
@@ -74,7 +78,7 @@ describe("Phone controller test", function () {
         scope.addPhone();
 
         expect(scope.genErr).toBe(false);
-        expect(HttpMock.verifyPostCalled()).toBe(false);
+        expect($http.post).not.toHaveBeenCalled();
     });
 
     it("Should post if user tries to add phone with valid data", function () {
@@ -86,13 +90,59 @@ describe("Phone controller test", function () {
         scope.phone = "myPhone";
         scope.data = "lotsOfPhones";
 
-        HttpMock.withPostSuccessGiveData(phoneId);
+        stubPost(phoneId);
 
         scope.addPhone();
 
         expect(scope.genErr).toBe(false);
-        expect(HttpMock.verifyPostCalled()).toBe(true, "that $http::post method was called");
-        expect(PhoneServiceMock.verifyAddPhone("myPhone", "lotsOfPhones", phoneId)).toBe(true, "that addPhone(myPhone, lotsOfPhones, " + phoneId + ") was called");
+        expect($http.post).toHaveBeenCalled();
+        expect(phoneService.addPhone).toHaveBeenCalledWith("myPhone", "lotsOfPhones", phoneId);
     });
+
+    function stubPost(phoneId) {
+
+        var successObj = {
+
+            success: function (callbak) {
+                callbak(phoneId);
+            }
+        };
+
+        if (!$http.post.and) {
+
+            $http.post.andCallFake(function (url, data) {
+                return successObj;
+            });
+
+            return;
+        }
+
+        $http.post.and.callFake(function (url, data) {
+            return successObj;
+        });
+    }
+
+    function stubGet(data) {
+
+        var successObj = {
+
+            success: function (callbak) {
+                callbak(data);
+            }
+        };
+
+        if (!$http.get.and) {
+
+            $http.get.andCallFake(function (url, data) {
+                return successObj;
+            });
+
+            return;
+        }
+
+        $http.get.and.callFake(function (url, data) {
+            return successObj;
+        });
+    }
 });
 
